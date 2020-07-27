@@ -1,6 +1,11 @@
 h1{
-    color:blue;
+    color:black;
 }
 body{
-    background-color:grey;
+    background-color:darkgray;
 }
+.jumbotron {
+    background-image: url("../pics/wp4586060-aesthetic-space-wallpapers (1).jpg") ;
+    background-size: cover;
+    height: 100%;
+  }
