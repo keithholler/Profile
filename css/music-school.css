@@ -35,7 +35,7 @@ p{
     background-image: url("../pics/music-lesson.jpg");
   
     /* Set a specific height */
-    height: 200px;
+    height: 250px;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
