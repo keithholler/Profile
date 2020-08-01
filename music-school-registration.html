@@ -20,7 +20,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h1>Music School</h1>
+                            <a href="music-school.html"> <h1>Music School</h1> </a>
                             <h3>Music is Knowledge</h3>
                         </div>
                     </div> 
@@ -144,7 +144,11 @@
         </footer>
 
 
-        
+
+      
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
     var selectAge = document.getElementById("selectAge");
 var contents;
@@ -153,11 +157,7 @@ for (let i = 0; i <= 100; i++) {
  
   contents += "<option>" + i + "</option>";
 }
-
 selectAge.innerHTML = contents;
-</script>        
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</script>  
 </body>
 </html>
