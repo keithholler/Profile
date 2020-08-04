@@ -66,9 +66,6 @@ h5 {
   color: white;
 }
 
-#Project {
-  color: black;
-}
 
 .navbar {
   padding: 0;
@@ -317,3 +314,60 @@ h1 span:nth-child(12) {
     transform: scale(2);
   }
 }
+@keyframes faderight{
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity:100%
+  }
+}
+
+h2 span{
+  animation:faderight 3s linear;
+}
+h2 span:nth-child(0) {
+  animation-delay: 0.1s;
+}
+
+h2 span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+h2 span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+h2 span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+h2 span:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+h2 span:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+h2 span:nth-child(6) {
+  animation-delay: 0.7s;
+}
+
+h2 span:nth-child(7) {
+  animation-delay: 0.8s;
+}
+
+h2 span:nth-child(8) {
+  animation-delay: 0.9s;
+}
+
+h2 span:nth-child(9) {
+  animation-delay: 0.10s;
+}
+
+h2 span:nth-child(10) {
+  animation-delay: 0.11s;
+}
+
+
