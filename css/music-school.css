@@ -5,14 +5,14 @@ h1{
     color:black;
 }
 body{
-    font-family: 'Anton', sans-serif;
+  font-family: 'Fondamento', cursive;
     background-color:rgb(255, 255, 255);
 }
 p{
   color:rgb(73, 73, 73);
 }
 p:hover{
-  text-shadow: 0px 2px 0px #d6d6d6;
+
   transform: translateY(-0.25em);
 }
 
@@ -28,8 +28,9 @@ p:hover{
   }
   .row-content{
     padding: 50px 0;
-    border-bottom: 1px ridge;
+    border-bottom: black 1px ridge;
     min-height: 20px;
+
 }
 .navbar{
     background-color:black;
@@ -109,7 +110,7 @@ p:hover{
       margin:20px;
   }
   .teachers:hover{
-    text-shadow: 0px 2px 0px #d6d6d6;
+
     transform: translateY(-0.25em);
   }
   .teachers-img:hover{
@@ -152,6 +153,13 @@ p:hover{
   animation-delay:.2s;
   animation: fadeIn ease 3s;
   
+}
+
+footer{
+  background-color:black;
+}
+footer h5{
+  color:white;
 }
 
  @keyframes fadeIn {

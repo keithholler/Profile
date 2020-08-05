@@ -10,10 +10,7 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap"  rel="stylesheet">
     <link
       rel="stylesheet"
       href="node_modules/font-awesome/css/font-awesome.min.css"
@@ -25,21 +22,32 @@
     <link rel="stylesheet" href="css/music-school.css" />
   </head>
   <body>
-    <!--  <header class="jumbotron jumbotron-fluid ">-->
-      <header>
-        <div class="container">
-            <div class="row">
-                    <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                        <a href="music-school.html">
-                          <img src="/pics/MusicLogo.png" class="img-fluid logo"/></a>
-                      </div>
-                      <div class="col">
-                        <h1>Music School</h1>
-                        <h5 class="mt-2">Music is Knowledge</h5>
-                      </div>
-            </div> 
-        </div>
-    </header>
+    <header>
+      <div class="container">
+          <div class="row">
+                  <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                      <a href="music-school.html">
+                        <img src="/pics/MusicLogo.png" class="img-fluid logo"/></a>
+                    </div>
+                    <div class="col">
+                      <h1>Music School</h1>
+                      <h5 class="mt-2">Music is Knowledge</h5>
+                    </div>
+                    <div class="col-md-4 col-xl-2 mt-4">
+                      <a
+                        class="btn btn-dark text-white btn-lg mt-4 text-nowrap"
+                        role="button"
+                        href="music-school-registration.html"
+                        data-toggle="tooltip"
+                        data-palement="bottom"
+                        data-html="true"
+                        title="Or call us at <br> <strong>555-555-5555</strong>"
+                        >Regeister Now</a
+                      >
+                    </div>
+          </div> 
+      </div>
+  </header>
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
       <div class="container">
@@ -86,7 +94,7 @@
     <div class="parallax"></div>
 
     <div class="container">
-      <div class="card mt-5 fadein">
+      <div class="card mt-5 mb-5 fadein">
         <div class="row">
           <div class="col-12 pb-0 pt-0">
             <iframe
@@ -156,5 +164,10 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>
