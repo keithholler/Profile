@@ -325,7 +325,7 @@ h1 span:nth-child(12) {
 }
 
 .glisten span{
-  font-size: 22px;
+  font-size: 16px;
   animation:faderight 3s linear;
 }
 .glisten span:nth-child(0) {
