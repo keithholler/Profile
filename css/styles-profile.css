@@ -228,7 +228,7 @@ h1 span {
   top: 20px;
   display: inline-block;
   animation: bounce 0.3s ease infinite alternate;
-  font-size: 80px;
+  font-size: 45px;
   color: #fff;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
     0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
@@ -321,6 +321,7 @@ h1 span:nth-child(12) {
 }
 
 .glisten span{
+  font-size: 22px;
   animation:faderight 3s linear;
 }
 .glisten span:nth-child(0) {
@@ -366,6 +367,7 @@ h1 span:nth-child(12) {
 .glisten span:nth-child(10) {
   animation-delay: 0.11s;
 }
+
 
 
 
