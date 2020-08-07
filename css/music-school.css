@@ -1,3 +1,9 @@
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+
 header{
   background-color:rgb(73, 46, 88);
 }
@@ -213,10 +219,9 @@ animation: fadeIn ease 3s;
 
 footer{
 background-color:rgb(73, 46, 88);
-position: absolute;
-  bottom: 0;
-  width: 100%;
+
 }
+
 footer h5{
 color:white;
 }
@@ -254,5 +259,6 @@ color:white;
   height:100%;
   
 }
+
 
  
