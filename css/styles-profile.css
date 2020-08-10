@@ -50,7 +50,7 @@ html{
 .projectbtn{
   position: absolute;
   z-index: 100;
-  top: 85%;
+  top: 82%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
