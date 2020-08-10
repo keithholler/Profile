@@ -37,18 +37,98 @@
                     </div>
                     <div class="col col-xl-3 text-center my-auto">
                       <a
-                        class="btn  text-white btn-lg  text-nowrap regbtn"
-                        role="button"
-                        href="music-school-registration.html"
-                        data-toggle="tooltip"
-                        data-palement="bottom"
-                        data-html="true"
-                        title="Or call us at <br> <strong>555-555-5555</strong>"
-                        >Regeister Now</a
-                      >
+                      class="btn  text-white btn-lg  text-nowrap regbtn"
+                      role="button"
+                      data-target="#reserveModal"
+                      data-toggle="modal"
+                      >Register Now</a
+                    >
+
+                      <div id="reserveModal" class="modal fade" role="dialog">
+                          <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header text-white">
+                                <h3 class="modal-title">Register Now</h3>
+                                <button type="button" class="close" data-dismiss="modal">
+                                  &times;
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="container-fluid">
+                                  <form>
+                                      <div class="form-group    row">
+                                          <label for="instructorFirstName"  class="col-md-2 col-form-label ">First Name:</label>
+                                          <div class="col-md-10">
+                                              <input type="text" class="form-control" id="instructorFirstName" name="instructorFirstName" placeholder="First Name" />
+                                          </div>
+                                      </div>
+                                      <div class="form-group row">
+                                          <label for="instructorLasttName" class="col-md-2 col-form-label">Last Name:</label>
+                                          <div class="col-md-10">
+                                              <input type="text" class="form-control" id="instructorLasttName" name="instructorLasttName" placeholder="Last Name" />
+                                          </div>
+                                      </div>
+                                      <div class="form-group row">
+                                          <label class="col-md-2 col-form-label" for="selectAge">Age:</label>
+                                          <div class="col-md-10">
+                                              <select class="form-control" name="age" id="selectAge"></select>
+                                           </div>
+                                      </div>
+                                      <div class="form-group row">
+                                          <label class="col-md-2 col-form-label" for="Instrument">Instrument:</label>
+                                          <div class="col-lg-10">
+                                              <select  name="Instrument" id="Instrument">
+                                                  <option value="">Select</option>
+                                                  <option value="Guitar">Guitar</option>
+                                                  <option value="Bass Guitar">Bass Guitar</option>
+                                                  <option value="Drums">Drums</option>
+                                                  <option value="Piano">Piano</option>
+                                              </select>
+                                              <label class=" col-lg-2 col-form-label " for="skill">Skill Level:</label>
+                                              
+                                                  <input type = "radio" id="beginner" name="skill" value="beginner"/>
+                                                  <label for="beginner">Beginner</label>
+                                                  <input type = "radio" id="intermediate" name="skill" value="intermediate"/>
+                                                  <label for="intermediate">Intermediate</label>
+                                                  <input type = "radio" id="advanced" name="skill" value="advanced"/>
+                                                  <label for="advanced">Advanced</label>
+                                          </div>
+                                      </div>
+                                      <div class="form-group row">
+                                          <label for="phone" class="col-md-2 col-form-label">Phone:</label>
+                                          <div class="col-md-10">
+                                              <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number" />
+                                          </div>
+                                      </div>
+                                      <div class="form-group row">
+                                          <label for="email" class="col-md-2 col-form-label">Email:</label>
+                                          <div class="col-md-10">
+                                              <input type="text" class="form-control" id="email" name="email" placeholder="Email" />
+                                          </div>
+                                      </div>
+              
+              
+              
+                                      <div class="form-group row ">
+                                          <div class="offset-md-2 col-md-10">
+                                              <button type="submit" class="btn formbut raise text-white">Submit</button>
+                                          </div>
+                                      </div>
+                                  </form>
+                                  
+                  
+                  
+                  
+                              </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-            </div> 
-        </div>
+
+
+                  </div>
+          </div> 
+      </div>
     </header>
 
     <nav class="navbar navbar-expand-sm navbar-light sticky-top">
@@ -73,10 +153,6 @@
                 ><i class="fa fa-info fa-lg"></i>About</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="music-school-registration.html"
-                ><i class="fa fa-address-card fa-lg"></i>Registration</a
-              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="music-school-loc.html"
@@ -167,7 +243,6 @@
             <ul class="list-unstyled">
               <li><a href="music-school.html">Home</a></li>
               <li><a href="music-school-about.html">About</a></li>
-              <li><a href="music-school-registration.html">Registration</a></li>
               <li><a href="music-school-loc.html">Location</a></li>
               <li><a href="music-school-feedback.html">Feedback</a></li>
             </ul>
@@ -217,5 +292,20 @@
         $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
+    <script>
+      var selectAge = document.getElementById("selectAge");
+  var contents;
+  
+  for (let i = 0; i <= 100; i++) {
+   
+    contents += "<option>" + i + "</option>";
+  }
+  selectAge.innerHTML = contents;
+  
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    
+  </script>  
   </body>
 </html>
