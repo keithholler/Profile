@@ -40,7 +40,7 @@ html{
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -50,7 +50,7 @@ html{
 .projectbtn{
   position: absolute;
   z-index: 100;
-  top: 93%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
