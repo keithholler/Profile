@@ -33,6 +33,7 @@
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
     <link rel="stylesheet" href="css/styles-profile.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   
   <body>
@@ -74,14 +75,15 @@
     
     
     <div class="wraphero">
+      
+      
       <div class="hero-image">
-        <div class="hero-image2">
-
-          </div>
-        <div class="hero-text">
-          <img class="rounded-circle" src="pics/me.jpg" alt="profile picture">
-
-            <h2 class="mb-5 glisten">
+        
+          <div class="hero-image2"></div>
+          <div class="hero-text">
+          
+          
+            <h2 class=" glisten glisten2">
         
               <span>H</span>
               <span>e</span>
@@ -94,13 +96,17 @@
               <span>a</span>
               <span>m</span>
             </h2>
-            <h1>
+
+        <img class="rounded-circle me" src="pics/me.jpg" alt="profile picture">
+        
+        
+            <h1 class="name text-nowrap glisten2">
               <span>K</span>
               <span>e</span>
               <span>i</span>
               <span>t</span>
               <span>h</span>
-            <br>
+            
               <span>H</span>
               <span>o</span>
               <span>l</span>
@@ -109,18 +115,20 @@
               <span>r</span>
             </h1>
             
-            <p>
+            <p class="intro">
               And I am a web developer who creates user friendly functional
               websites.
             </p>
             
-            <a  href="#Project"><button class="buttoncolors btn-lg text-nowrap">See Projects Below</button></a>
+            
           </div>
+          <a  href="#Project"><button type="button" class="btn btn-lg text-nowrap projectbtn">See Projects Below</button></a>
       </div>
+      
     </div>
 
-    <div class="container">
-        <div class="row row-content">
+    <div class="container hide" >
+        <div class="row row-content"data-aos="fade-up">
             <div class="col-md-8 mx-auto">
                 <h2 class="text-center fly" id="Project">
                   <span>P</span>
@@ -134,7 +142,7 @@
                 </h2>
             </div>
         </div>
-      <div class="row mt-3">
+      <div class="row mt-3"data-aos="fade-up">
         <div class="col col-md-6">
           <div class="flip-card-container mr-1">
             <div class="flip-card">
@@ -144,9 +152,40 @@
                 /></a>
               </div>
               <div class="flip-card-back rounded">
-                <a href="music-school.html" target="_blank"
-                  ><img src="pics/music class.png" alt="Welcome To Music"
-                /></a>
+                <div class="container">
+                  <div class="row ">
+                    <div class="col">
+                      <h3><u>Skills Used</u></h3>
+                    </div>
+                  </div>
+                  <div class="row ">
+                    <div class="col mt-5">
+                      <p>HTML , CSS , Javascript , Bootstrap</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                  <div class="row mt-5">
+                    <div class="col">
+                      <h3><u>About</u></h3>
+                    </div>
+                </div>
+                  <div class="row mt-5">
+                    <div class="col">
+                      <p>Music School website for gaining more students to join the program.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="https://keithholler.github.io/music-school.html">Project</a>
+                    </div>
+                      <div class="col-6">
+                      <a href="https://github.com/keithholler/Bootstrap">GitHub</a>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                
+                </div>
               </div>
             </div>
           </div>
@@ -208,5 +247,10 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
