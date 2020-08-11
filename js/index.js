@@ -1,45 +1,66 @@
-const imgPoss = [];
-
-let maxX, maxY;
-
-function laceImg() {
-    const backcircle = 'pics/circle.png';
-    const {random: r} = Math;
+function line(particle, particle2) {
+    context.beginPath();
+    context.moveTo(particle.x, particle.y);
+    context.lineTo(particle2.x, particle2.y);
+    context.stroke();
+  }
    
-    const x = r() * maxX;
-    const y = r() * maxY;
-    
-    if(!isOverlap(x,y)) {
-        var link = `<img class="circle" style="left: ${x}px; top: ${y}px;" src="${backcircle}" />`;
-        var bodyHtml = document.body.innerHTML;
-        document.body.innerHTML =  bodyHtml + link;
-        
-        imgPoss.push({x, y}); // record all img positions
+  function animate() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < maxParticles; i++) {
+      let particle = particles[i];
+      context.fillRect(particle.x - particleSize / 2, particle.y - particleSize / 2, particleSize, particleSize);
+      for (let j = 0; j < maxParticles; j++) {
+        if (i != j) {
+          let particle2 = particles[j];
+          let distanceX = Math.abs(particle.x - particle2.x);
+          let distanceY = Math.abs(particle.y - particle2.y);
+          if (distanceX < threshold && distanceY < threshold) {
+            context.lineWidth = ((threshold * 2) - (distanceX + distanceY)) / 50;
+            let color = 200 - Math.floor(distanceX + distanceY);
+            context.strokeStyle = 'rgb(' + color + ',' + color + ',' + color + ')';
+            line(particle, particle2);
+          }
+        }
+      }
+      //particle.x = particle.x + -particle.vx;
+      particle.y = particle.y + -particle.vy;
+      if (particle.x > canvas.width - particleSize || particle.x < particleSize)
+        particle.vx = -particle.vx;
+      if (particle.y > canvas.height - particleSize || particle.y < particleSize)
+        particle.vy = -particle.vy;
     }
-}
-
-function isOverlap(x, y) { // return true if overlapping
-    const backcircle = {x: 128, y:160};
-    
-    for(const imgPos of imgPoss) {
-        if( x>imgPos.x-backcircle.x && x<imgPos.x+backcircle.x &&
-            y>imgPos.y-backcircle.y && y<imgPos.y+backcircle.y ) return true;
-    }
-    return false;
-}
-
-onload = function() {
-    maxX = innerWidth - 128;
-    maxY = innerHeight - 160;
-    for(i=0;i<100;i++){
-        placeImg();
-    }
-    
+    window.requestAnimationFrame(animate);
+  }
    
-    //setInterval(placeImg, 1);
-}
+  let canvas = document.getElementById('myCanvas');
+  var context = canvas.getContext('2d');
 
-onresize = function() {
-    maxX = innerWidth - 128;
-    maxY = innerHeight - 160;
-}
+// Set display size (css pixels).
+var size = 2000;
+canvas.style.width = size + "px";
+canvas.style.height = size + "px";
+
+// Set actual size in memory (scaled to account for extra pixel density).
+var scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
+canvas.width = Math.floor(size * scale);
+canvas.height = Math.floor(size * scale);
+
+// Normalize coordinate system to use css pixels.
+context.scale(scale, scale);
+
+  let particles = [];
+  let particleSize = 4;
+  let maxParticles = 600;
+  let threshold = 60;
+  for (let i = 0; i < maxParticles; i++) {
+    let particle = {
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: Math.random(),
+      vy: Math.random()
+    }
+    particles.push(particle);
+  }
+  context.fillStyle = 'white';
+  animate();
