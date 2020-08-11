@@ -51,8 +51,8 @@ context.scale(scale, scale);
 
   let particles = [];
   let particleSize = 4;
-  let maxParticles = 600;
-  let threshold = 60;
+  let maxParticles = 200;
+  let threshold = 100;
   for (let i = 0; i < maxParticles; i++) {
     let particle = {
       x: Math.random() * canvas.width,

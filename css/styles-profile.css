@@ -14,6 +14,17 @@ html{
   overflow: hidden;
 }
 
+.hero-image {
+  position:absolute;
+ 
+  background-image: url("../pics/geo.png");
+  width: 100%;
+  height: 100%;
+  background-size:1000px 1000px ;
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+}
+
 #myCanvas {
   position:absolute;
  
